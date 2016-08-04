@@ -1,0 +1,8 @@
+## root
+# pkg
+env ASSUME_ALWAYS_YES=yes pkg update
+pkg install -y zsh git vim-lite sudo
+pkg clean -ya
+# sudo
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" | tee /usr/local/etc/sudoers.d/wheel
+chmod 0440 /usr/local/etc/sudoers.d/wheel
