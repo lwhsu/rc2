@@ -1,7 +1,13 @@
 ## root
 # pkg
 env ASSUME_ALWAYS_YES=yes pkg update
-pkg install -y zsh git vim-lite sudo tmux ctags
+pkg install -y \
+	    zsh \
+	    git \
+	    vim-lite \
+	    sudo \
+	    tmux \
+	    ctags
 pkg clean -ya
 # sudo
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | tee /usr/local/etc/sudoers.d/wheel
